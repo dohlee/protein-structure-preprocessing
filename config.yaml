@@ -1,0 +1,5 @@
+pdb_list: 'pdb_list.txt'
+
+reducebin: '/usr/local/bin/reduce'
+reducedb: 'assets/reduce_wwPDB_het_dict.txt'
+

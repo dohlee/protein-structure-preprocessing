@@ -1,0 +1,9 @@
+# temp files
+.snakemake/
+
+# pipeline results
+pdb/
+result/
+
+# tools
+reduce/
