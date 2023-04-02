@@ -4,6 +4,9 @@ Pipelines to preprocess protein structures for model training.
 
 ## Requirements
 
-- Install REDUCE (https://github.com/rlabduke/reduce).
+- REDUCE binary executable (https://github.com/rlabduke/reduce)
+- BioPython `conda install -c anaconda biopython`
+- pdbfixer `conda install -c conda-forge pdbfixer`
 
+## Usage
 

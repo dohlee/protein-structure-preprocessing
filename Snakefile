@@ -4,7 +4,10 @@ pids = [l.strip() for l in open(config['pdb_list']).readlines()]
 
 ALL = []
 ALL.append(
-    expand('result/01_reduce/{pid}.pdb', pid=pids)
+    expand('result/01_reduce/{pid}.pdb', pid=pids),
+)
+ALL.append(
+    expand('result/02_cleaned/{pid}.pdb', pid=pids),
 )
 
 rule all:
@@ -30,3 +33,12 @@ rule reduce:
         '-Quiet '
         '{input} > {output}'
 
+rule clean_pdb:
+    input:
+        'result/01_reduce/{pid}.pdb'
+    output:
+        'result/02_cleaned/{pid}.pdb'
+    shell:
+        'python scripts/clean_pdb.py '
+        '-i {input} '
+        '-o {output}'
